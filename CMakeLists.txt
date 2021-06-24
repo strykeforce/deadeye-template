@@ -12,10 +12,11 @@ add_subdirectory(deadeye/daemon)
 # Build main target
 add_executable(deadeye-template
     main.cpp
+    custom_pipeline.cpp
 )
 set_target_properties(deadeye-template PROPERTIES
-  OUTPUT_NAME change-me-in-CMakeLists
-  EXPORT_NAME change-me-in-CMakeLists
+  OUTPUT_NAME custom_deadeyed
+  EXPORT_NAME custom_deadeyed
 )
 
 target_compile_definitions(deadeye-template
