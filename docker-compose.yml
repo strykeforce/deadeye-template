@@ -2,7 +2,7 @@ version: "3.4"
 
 x-common-environment: &common-environment
   DEADEYE_DOCKER: 1
-  DEADEYE_NT_SERVER: 192.168.1.11
+  DEADEYE_NT_SERVER: nt
 
 volumes:
   upload_data:
@@ -33,3 +33,7 @@ services:
     image: j3ff/deadeye-web
     ports:
       - "8080:80"
+  nt:
+    image: j3ff/nt-server
+    volumes:
+      - ./nt:/data
