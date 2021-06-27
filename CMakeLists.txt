@@ -11,8 +11,9 @@ add_subdirectory(deadeye/daemon)
 
 # Build main target
 add_executable(deadeye-template
-    main.cpp
-    custom_pipeline.cpp
+    src/main.cpp
+    src/custom_pipeline.cpp
+    src/custom_target_data.cpp
 )
 set_target_properties(deadeye-template PROPERTIES
   OUTPUT_NAME custom_deadeyed

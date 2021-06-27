@@ -13,7 +13,7 @@ RUN cmake \
     -D DEADEYE_BUILD_TESTS=ON \
     -D DEADEYE_UNIT_ID=C \
     -D DEADEYE_NT_SERVER=10.27.67.2 \
-    -D DEADEYE_CAMERA0_PIPELINE=CustomPipeline \
+    -D DEADEYE_CAMERA0_PIPELINE=custom::CustomPipeline \
     /app \
     && make -j$(nproc)
 
